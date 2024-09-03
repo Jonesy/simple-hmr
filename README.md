@@ -35,7 +35,7 @@ program should be running. `Ctrl+c` to exit.
 ### Optional Instructions
 
 This example repository uses Deno to demonstrate the server and API, but can
-easily be swapped out to another language. Swap out line 57 with the server
+easily be swapped out to another language. Swap out line 58 with the server
 command you would like to use:
 
 ```diff
