@@ -1,0 +1,111 @@
+:root {
+  /* Core */
+  --c-white: #ebfafa;
+  --c-black: #212337;
+  --c-grey: #323449;
+  --c-magenta: #7081d0;
+  --c-cyan: #04d1f9;
+  --c-green: #37f499;
+  --c-orange: #f7c67f;
+  --c-pink: #f265b5;
+  --c-purple: #a48cf2;
+  --c-red: #f16c75;
+  --c-yellow: #f1fc79;
+  --c-font-mono: monospace;
+  /* System */
+  --s-color-fg: var(--c-magenta);
+  --s-color-bg: var(--c-white);
+  --s-color-border: var(--c-magenta);
+  --s-color-headline: var(--c-magenta);
+  --s-color-text: var(--c-magenta);
+  --s-color-link: var(--c-pink);
+  --s-color-muted: var(--c-purple);
+  --s-button-text: var(--c-white);
+  --s-button-bg: var(--c-pink);
+  --s-font-family: var(--c-font-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --s-color-fg: var(--c-white);
+    --s-color-bg: var(--c-black);
+    --s-color-headline: var(--c-magenta);
+    --s-color-border: var(--c-grey);
+    --s-color-text: var(--c-white);
+    --s-color-muted: var(--c-grey);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--s-font-family);
+  color: var(--s-color-text);
+  background-color: var(--s-color-bg);
+}
+
+code {
+  padding-inline: 2px;
+  border-radius: 4px;
+  background-color: var(--c-shadow);
+  border: 1px solid var(--s-color-border);
+}
+
+h1,
+p {
+  margin-bottom: 1rem;
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, 6rem);
+  line-height: 1.2;
+  color: var(--s-color-headline);
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  color: var(--s-color-link);
+}
+
+button {
+  appearance: none;
+  border: none;
+  font-family: var(--s-font-family);
+  font-size: 1.2rem;
+  color: var(--s-button-text);
+  border-radius: 2px;
+  background: var(--s-button-bg);
+  padding: 0.25rem 0.5rem;
+}
+
+.text--muted {
+  color: var(--s-color-muted);
+
+  a {
+    color: var(--s-color-muted);
+  }
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 50rem;
+  padding-inline: 1rem;
+}
+
+my-counter {
+  display: block;
+  margin-block: 1rem;
+}
